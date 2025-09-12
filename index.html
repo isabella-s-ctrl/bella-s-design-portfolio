@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Bella Sill, showcasing design projects and skills">
+    <meta name="keywords" content="designer, portfolio, branding, UI/UX, graphic design">
+    <meta name="author" content="Bella Sill">
+    
+    <title>Bella Sill | Design Portfolio</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css?v=1.5">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Test comment to check editability -->
+</head>
+<body>
+
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home">bella sill</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#projects" class="nav-link active">projects</a></li>
+                <li><a href="fun-stuff.html" class="nav-link">fun stuff</a></li>
+                <li><a href="about.html" class="nav-link">about me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+                            <div class="hero-text">
+                        <div class="top-line">
+                            <span class="line line-1">
+                                <span class="word word-1">hi!</span>
+                                <span class="word word-2">i'm</span>
+                                <span class="word word-3">bella</span>
+                            </span>
+                        </div>
+                        <div class="line line-3">
+                            <span class="word word-4">&</span>
+                            <span class="word word-5">i'm</span>
+                            <span class="word word-6">all</span>
+                            <span class="word word-7">about</span>
+                            <span class="word word-8">human-centered</span>
+                            <span class="word word-9">design</span>
+                        </div>
+                        <div class="scroll-hint">
+                            <span class="scroll-text">scroll to see more</span>
+                            <span class="scroll-arrow">↓</span>
+                        </div>
+                    </div>
+        
+        <div class="hero-photo">
+            <img src="images/bella-photo.jpeg" alt="Bella" class="profile-photo">
+            
+            <!-- Doodle Animation Container -->
+            <div class="doodle-container">
+                <!-- Focus circles -->
+                <svg class="doodle doodle-focus" viewBox="0 0 500 500">
+                    <circle cx="250" cy="250" r="180" fill="none" stroke="#9B59B6" stroke-width="2" stroke-dasharray="5,5" opacity="0.6">
+                        <animate attributeName="r" values="180;200;180" dur="3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.6;0.3;0.6" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="250" cy="250" r="220" fill="none" stroke="#9B59B6" stroke-width="1" stroke-dasharray="3,3" opacity="0.4">
+                        <animate attributeName="r" values="220;240;220" dur="4s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.4;0.2;0.4" dur="4s" repeatCount="indefinite"/>
+                    </circle>
+                </svg>
+                
+                <!-- Connection lines -->
+                <svg class="doodle doodle-connections" viewBox="0 0 500 500">
+                    <line x1="50" y1="250" x2="150" y2="250" stroke="#E74C3C" stroke-width="2" opacity="0.7">
+                        <animate attributeName="x2" values="150;180;150" dur="2s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+                    </line>
+                    <line x1="350" y1="250" x2="450" y2="250" stroke="#E74C3C" stroke-width="2" opacity="0.7">
+                        <animate attributeName="x1" values="350;320;350" dur="2.5s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2.5s" repeatCount="indefinite"/>
+                    </line>
+                    <line x1="250" y1="50" x2="250" y2="150" stroke="#E74C3C" stroke-width="2" opacity="0.7">
+                        <animate attributeName="y2" values="150;180;150" dur="3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite"/>
+                    </line>
+                    <line x1="250" y1="350" x2="250" y2="450" stroke="#E74C3C" stroke-width="2" opacity="0.7">
+                        <animate attributeName="y1" values="350;320;350" dur="2.8s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2.8s" repeatCount="indefinite"/>
+                    </line>
+                </svg>
+                
+                <!-- Thought bubbles -->
+                <svg class="doodle doodle-thoughts" viewBox="0 0 500 500">
+                    <circle cx="80" cy="80" r="15" fill="#F39C12" opacity="0.6">
+                        <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="420" cy="80" r="12" fill="#F39C12" opacity="0.6">
+                        <animate attributeName="r" values="12;18;12" dur="2.3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.3s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="80" cy="420" r="10" fill="#F39C12" opacity="0.6">
+                        <animate attributeName="r" values="10;16;10" dur="1.8s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="1.8s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="420" cy="420" r="18" fill="#F39C12" opacity="0.6">
+                        <animate attributeName="r" values="18;25;18" dur="2.7s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.7s" repeatCount="indefinite"/>
+                    </circle>
+                </svg>
+                
+                <!-- Sparkle effects -->
+                <svg class="doodle doodle-sparkles" viewBox="0 0 500 500">
+                    <path d="M 120 120 L 125 125 L 130 120 L 125 115 Z" fill="#9B59B6" opacity="0.8">
+                        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1.5s" repeatCount="indefinite"/>
+                        <animateTransform attributeName="transform" type="rotate" values="0 125 120;360 125 120" dur="3s" repeatCount="indefinite"/>
+                    </path>
+                    <path d="M 380 120 L 385 125 L 390 120 L 385 115 Z" fill="#E74C3C" opacity="0.8">
+                        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1.8s" repeatCount="indefinite"/>
+                        <animateTransform attributeName="transform" type="rotate" values="0 385 120;360 385 120" dur="2.5s" repeatCount="indefinite"/>
+                    </path>
+                    <path d="M 120 380 L 125 385 L 130 380 L 125 375 Z" fill="#F39C12" opacity="0.8">
+                        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.2s" repeatCount="indefinite"/>
+                        <animateTransform attributeName="transform" type="rotate" values="0 125 380;360 125 380" dur="3.5s" repeatCount="indefinite"/>
+                    </path>
+                    <path d="M 380 380 L 385 385 L 390 380 L 385 375 Z" fill="#F39C12" opacity="0.8">
+                        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1.9s" repeatCount="indefinite"/>
+                        <animateTransform attributeName="transform" type="rotate" values="0 385 380;360 385 380" dur="2.8s" repeatCount="indefinite"/>
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">some of my projects</h2>
+            <div class="projects-grid">
+                <a href="projects/project1.html" class="project-card">
+                    <div class="project-image">
+                        <img src="images/tech-spec.jpg" alt="PianoProse Technical Specifications">
+                    </div>
+                    <div class="project-content">
+                        <h3>PianoProse</h3>
+                        <p>A novel text entry technique using a piano keyboard to address pain points for mobility-impaired users on QWERTY keyboards. </p>
+                        <div class="project-tags">
+                            <span class="tag">User Research</span>
+                            <span class="tag">Product Design</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="projects/project2.html" class="project-card">
+                    <div class="project-image">
+                        <img src="images/project2.jpg" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>Second Service</h3>
+                        <p>A complete re-design & branding of a SF-based Christian club.</p>
+                        <div class="project-tags">
+                            <span class="tag">Visual Branding</span>
+                            <span class="tag">Figma</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="projects/project3.html" class="project-card">
+                    <div class="project-image">
+                        <img src="images/project3.jpg" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>Campus Mailroom System Upgrade</h3>
+                        <p>Designed user-centered solutions for CMU Packaging Services with the goal of improving key friction points for > 15,000 students.</p>
+                        <div class="project-tags">
+                            <span class="tag">Wireframing</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">User Interviews</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Bella Sill. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+
+</body>
+</html> 
