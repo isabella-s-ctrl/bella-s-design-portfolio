@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface Design - Bella's Portfolio</title>
     <meta name="description" content="Detailed case study of Interface Design - Design Portfolio by Bella">
-    <link rel="stylesheet" href="../css/style.css?v=1.7">
+    <link rel="stylesheet" href="../css/style.css?v=5.9">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="project-plaidpickup">
     <div class="scroll-progress"><div class="scroll-progress__bar"></div></div>
     <!-- Navigation -->
     <nav class="navbar">
@@ -31,12 +31,12 @@
         <div class="container">
             <div class="project-intro">
                 <a href="../index.html" class="back-link">⟵ back to projects</a>
-                <h1 class="project-title">Plaid Pickup – Improving Package Pickup Efficiency at CMU</h1>
-                <p class="project-subtitle">Plaid Pickup was a service design and UX project aimed at streamlining Carnegie Mellon University's package pickup process by improving queue transparency and reducing student wait times.</p>
+                <h1 class="project-title">Plaid Pickup</h1>
+                <p class="project-subtitle">Plaid Pickup is a techological solutions project aimed at improving queue transparency and reducing student wait times in CMU's campus mailroom.</p>
                 <div class="project-meta">
-                    <span class="project-role">Role: UX/UI Designer (Business Technology Group team project)</span>
-                    <span class="project-timeline">Timeline: 1 semester (Fall 2024–Spring 2025)</span>
-                    <span class="project-tools">Tools: Figma, Miro, Google Suite</span>
+                    <span class="project-role"><strong>Role:</strong> UX/UI Designer (Business Technology Group)</span>
+                    <span class="project-timeline"><strong>Timeline:</strong> 1 semester (Fall 2024–Spring 2025)</span>
+                    <span class="project-tools"><strong>Tools:</strong> Figma, Google Suite</span>
                 </div>
             </div>
         </div>
@@ -50,114 +50,148 @@
                 <h2>overview</h2>
                 <div class="project-overview">
                     <div class="overview-text">
-                        <p>This project was conducted through CMU's Business Technology Group (BTG) Product Studio, where I worked as part of a team to address a real campus service challenge.</p>
-                        <p>The campus mailroom struggled with long lines and inefficient communication about wait times, creating frustration for both students and staff. Our goal was to increase efficiency in the pickup process, provide transparency about queue length and wait times, and improve the student user experience while reducing operational bottlenecks.</p>
-                        <p>Efficient package pickup is a high-frequency, high-frustration task for students. Improving this service directly impacts student satisfaction and campus operations, making it a meaningful project with real-world impact.</p>
+                        <p>As a member of CMU's Business Technology Group (BTG) Product Studio, I worked as a UX/UI Designer on an interdisplinary team to address a real service challenge in our campus's mailroom.</p>
+                        <p>Our final deliverable was a set of design artifacts that could be used to guide the development of a new package queue management system for mailroom employees, along with a waittime prediction model for students.</p>
                     </div>
-                    <div class="overview-image">
-                        <img src="../project-images/project3/overview.jpg" alt="Plaid Pickup Overview">
+                    <div class="overview-grid">
+                        <img src="../project-images/project3/proj3-overview.png" alt="Project 3 overview 1">
+                        <img src="../project-images/project3/proj3-overview2.png" alt="Project 3 overview 2">
+                        <img src="../project-images/project3/proj3-overview3.png" alt="Project 3 overview 3">
                     </div>
                 </div>
             </section>
 
-            <!-- Problem Statement -->
+            <!-- Problem Discovery -->
             <section class="project-section">
-                <h2>the problem</h2>
+                <h2>problem</h2>
                 <div class="problem-content">
-                    <p>Long wait times and lack of real-time updates created significant frustration and inefficiency in the campus mailroom. Students had no clear sense of how long they would wait, staff had no structured way to communicate or manage throughput, and the experience varied dramatically depending on day and time.</p>
-                    <p>The core challenge was creating a solution that balanced simplicity for students with scalability for campus operations, while addressing the fundamental need for reliable, transparent information about line length, wait time, and pickup progress.</p>
-                    <div class="problem-points">
-                        <div class="problem-point">
-                            <h4>Scope Shifting</h4>
-                            <p>We had to pivot after realizing our initial idea wasn't feasible given BTG's constraints and available resources.</p>
+                    <div class="problem-circles">
+                        <div class="problem-circle">
+                            <span class="problem-number">1</span>
+                            <span>Students have no way of knowing the mail pickup waittime</span>
                         </div>
-                        <div class="problem-point">
-                            <h4>Limited Engagement</h4>
-                            <p>By the end of the year, mailroom staff were less invested, making long-term implementation difficult.</p>
+                        <div class="problem-circle">
+                            <span class="problem-number">2</span>
+                            <span>Workers only communicate with 1 student at a time, slowing package retrieval</span>
                         </div>
-                        <div class="problem-point">
-                            <h4>Data Collection Barriers</h4>
-                            <p>Measuring line metrics consistently (packages, wait time, throughput) required operational support that we couldn't fully secure.</p>
+                    </div>
+
+                    <div class="problem-grid">
+                        <img src="../project-images/project3/proj3-pd1.png" alt="Problem discovery artifact 2">
+                        <div class="problem-caption">
+                            <p>Brainstorming process flows and pain points</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Process -->
+            <!-- Setbacks -->
             <section class="project-section">
-                <h2>my process</h2>
-                <div class="process-steps">
-                    <div class="process-step">
-                        <h3>1. research</h3>
-                        <p>I conducted observational research in the mailroom to map current workflows and identify key metrics like package count, line size, and average pickup time. I also interviewed students to understand their frustrations and expectations with the current system.</p>
-                        <img src="../project-images/project3/research.jpg" alt="Research Phase">
-                    </div>
-                    <div class="process-step">
-                        <h3>2. ideation</h3>
-                        <p>I brainstormed ways to reduce uncertainty, including digital queue management and real-time wait estimates. I sketched potential UI flows for package acknowledgment and wait-time displays that would improve transparency.</p>
-                        <img src="../project-images/project3/ideation.jpg" alt="Ideation Phase">
-                    </div>
-                    <div class="process-step">
-                        <h3>3. prototyping</h3>
-                        <p>I created low- to mid-fidelity wireframes in Figma showing how students could check in and see expected wait times. I designed UI for acknowledging package quantity and entering the queue system.</p>
-                        <img src="../project-images/project3/prototype.jpg" alt="Prototyping Phase">
-                    </div>
-                    <div class="process-step">
-                        <h3>4. final design</h3>
-                        <p>I developed a concept for a self-service kiosk/scan system where students input package count and receive estimated wait times, with real-time visibility into queue progress via mobile or on-site displays.</p>
-                        <img src="../project-images/project3/final.jpg" alt="Final Design">
+                <h2>setbacks</h2>
+                <div class="setbacks-content">
+                    <p>As we began working with the mailroom staff, we encountered significant communication barriers that impacted our project timeline and scope.</p>
+                    <div class="setback-points">
+                        <div class="setback-point">
+                            <h4>📞 Employee Apprehension</h4>
+                            <p>Employees were apprehensive to work with BTG, with initial responses of being too busy to meet with us.</p>
+                        </div>
+                        <div class="setback-point">
+                            <h4>📧 No Communication</h4>
+                            <p>No response to emails asking to interview them.</p>
+                        </div>
+                        <div class="setback-point">
+                            <h4>🚫 On-Site Restrictions</h4>
+                            <p>Employee said we could not evaluate as students picked up packages, limiting our research capabilities.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Solution -->
+            <!-- Scope Redefinition -->
             <section class="project-section">
-                <h2>the solution</h2>
-                <div class="solution-content">
-                    <p>Plaid Pickup is a digital line management and wait-time transparency system designed to streamline the package pickup process. The solution addresses the core challenges through thoughtful service design and user-centered interface development.</p>
-                    <div class="solution-features">
-                        <div class="feature">
-                            <h4>Queue Acknowledgment</h4>
-                            <p>Students press a button to confirm they're in line, providing immediate feedback and reducing uncertainty about their place in the queue.</p>
-                        </div>
-                        <div class="feature">
-                            <h4>Package Count Input</h4>
-                            <p>Students enter how many packages they're picking up, improving throughput predictions and helping staff prepare accordingly.</p>
-                        </div>
-                        <div class="feature">
-                            <h4>Wait-Time Display</h4>
-                            <p>Real-time visibility shows how many people are ahead and estimated wait times, giving students clear expectations.</p>
-                        </div>
-                        <div class="feature">
-                            <h4>Mobile Integration</h4>
-                            <p>Queue progress accessible via mobile devices or on-site displays, providing flexibility for different user preferences.</p>
+                <h2>scope redefinition</h2>
+                <div class="scope-content">
+                    <p>Facing communication challenges with the mailroom, we pivoted our approach to focus on what we could control: designing user-centered interfaces that could work independently of the staff.</p>
+                    <p>We shifted from a full implementation project to a design research and prototyping initiative, focusing on creating validated concepts that could demonstrate value and potentially be implemented in the future.</p>
+                </div>
+            </section>
+
+            <!-- Research -->
+            <section class="project-section">
+                <h2>research</h2>
+                <div class="research-design-content">
+                    <div class="research-phase">
+                        <p>I interviewed dozens of students to understand their mailroom frustrations and expectations.</p>
+                        <p>My team conducted observational research in the mailroom to map current workflows and identify key metrics like package pickup counts, line size, and average pickup time.</p>
+                        <div class="research-grid">
+                            <img src="../project-images/project3/proj3-research1.png" alt="Research documentation 1">
+                            <img src="../project-images/project3/proj3-research2.png" alt="Research documentation 2">
                         </div>
                     </div>
-                    <div class="solution-gallery">
-                        <img src="../project-images/project3/solution1.jpg" alt="Plaid Pickup Interface">
-                        <img src="../project-images/project3/solution2.jpg" alt="Queue Management">
-                        <img src="../project-images/project3/solution3.jpg" alt="Mobile Display">
+                </div>
+
+            </section>
+
+            <!-- Design -->
+            <section class="project-section">
+                <h2>design</h2>
+
+                <!-- In-line Touchscreen Kiosk (Bella-led screens) -->
+                <div class="design-subsection">
+                    <h3>in‑line touchscreen kiosk</h3>
+                    <div class="two-col">
+                        <div>
+                            <p>I designed large‑format touchscreen interfaces for students waiting physically in line. These answers populate the waitlist system below.</p>
+                            <ul class="feature-list">
+                                <li><strong>Big‑tap UI:</strong> accessible controls for crowded, one‑handed use</li>
+                                <li><strong>Intuitive design</strong> taps/scrolls/clicks for answering questions </li>
+                                <li><strong>Clear steps:</strong> ensures students are prepared to pick up their packages</li>
+                            </ul>
+                        </div>
+                        <div class="kiosk-grid">
+                            <img src="../project-images/project3/kiosk-1.png" alt="Kiosk welcome / check‑in">
+                            <img src="../project-images/project3/kiosk-2.png" alt="Kiosk package count">
+                            <img src="../project-images/project3/kiosk-3.png" alt="Kiosk live queue status">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Waitlist System (Bella-led screens) -->
+                <div class="design-subsection">
+                    <h3>waitlist system</h3>
+                    <div class="two-col">
+                        <div>
+                            <p>I designed webpage interfaces for students trying to check the wait time online. These interfaces would change based on the kiosk data received from above.</p>
+                            <ul class="feature-list">
+                                <li><strong>Range of Statistics:</strong> number of people ahead, estimated waittime, and daily typical waittimes</li>
+                                <li><strong>Typographic Hierarchy:</strong> human-centered design for increased readability</li>
+                                <li><strong>Live status:</strong> updated in real-time as the line moves</li>
+                            </ul>
+                        </div>
+                        <div class="single-screen">
+                            <img src="../project-images/project3/waitlist-interface.png" alt="Waitlist system interface">
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Results -->
+            <!-- Future Plans -->
             <section class="project-section">
-                <h2>results & impact</h2>
-                <div class="results-content">
-                    <p>The project produced a validated concept and UI designs, though it was not fully implemented due to scope changes and reduced stakeholder engagement. However, early student feedback showed strong interest in greater transparency during pickup, and our research provided valuable metrics for potential future campus service improvements.</p>
-                    <div class="results-metrics">
-                        <div class="metric">
-                            <h4>Average Pickup Time</h4>
-                            <p>Varied significantly by package count, with 1-2 packages being most common per student</p>
+                <h2>future plans</h2>
+                <div class="future-plans-content">
+                    <p>While the project faced implementation challenges, the research and design work created a solid foundation for future development. The validated concepts and user insights provide a roadmap for potential mailroom improvements.</p>
+                    <div class="future-steps">
+                        <div class="future-step">
+                            <h4>🧪 Test</h4>
+                            <p>Conduct usability testing with the designed interfaces to validate user flows and identify areas for improvement.</p>
                         </div>
-                        <div class="metric">
-                            <h4>Line Throughput Capacity</h4>
-                            <p>Identified optimal capacity based on physical space constraints and staff availability</p>
+                        <div class="future-step">
+                            <h4>📊 Evaluate</h4>
+                            <p>Measure the impact of queue transparency on student satisfaction and mailroom efficiency through pilot studies.</p>
                         </div>
-                        <div class="metric">
-                            <h4>Package Quantity Patterns</h4>
-                            <p>Majority of students (70%) had 1-2 packages, informing queue management strategy</p>
+                        <div class="future-step">
+                            <h4>🔍 Explore</h4>
+                            <p>Investigate alternative implementation approaches that don't require extensive staff involvement or operational changes.</p>
                         </div>
                     </div>
                     <div class="key-learnings">
@@ -177,7 +211,7 @@
                     <h2>next project</h2>
                     <a href="project1.html" class="next-project-link">
                         <div class="next-project-preview">
-                            <img src="../project-images/project1/thumbnail.jpg" alt="PianoProse">
+                            <img src="../images/project1.jpg" alt="PianoProse">
                             <div class="next-project-info">
                                 <h3>PianoProse</h3>
                                 <p>A novel text entry technique for mobility impairments</p>
@@ -196,6 +230,6 @@
         </div>
     </footer>
 
-    <script src="../js/script.js?v=2.6"></script>
+    <script src="../js/script.js?v=2.9"></script>
 </body>
 </html> 

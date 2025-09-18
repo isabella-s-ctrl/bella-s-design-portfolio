@@ -119,6 +119,7 @@ section {
     padding: 50px 20px;
 }
 
+
 .hero-text {
     position: absolute;
     top: 5px;
@@ -642,7 +643,7 @@ section {
 }
 
 .project-title-bio {
-    flex: 0 0 50%;
+    flex: 0 0 45%;
 }
 
 .project-title {
@@ -652,15 +653,19 @@ section {
 .project-title-video {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 40px;
+    justify-content: flex-start;
+    margin-right: 0;
 }
 
 .project-title-video video {
-    width: 100%;
-    max-width: 800px;
-    height: 500px;
+    height: 700px;
+    width: auto;
+    max-width: 100%;
     object-fit: contain;
+    border: 3px solid #e9e9e9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-left: 96px;
 }
 
 .project-content {
@@ -857,7 +862,7 @@ body.project-pianoprose .credits-content::after {
     body.project-pianoprose .video-of-use,
     body.project-pianoprose .video-container {
         grid-column: 1;
-        width: 100%;
+    width: 100%;
         margin: 0;
     }
 }
@@ -1533,10 +1538,8 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
 .process-step img,
 .process-step video {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    height: auto;
+    object-fit: contain;
 }
 
 .solution-content p {
@@ -1690,7 +1693,8 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
 
 .next-project {
     text-align: center;
-    margin-top: 60px;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 .next-project-link {
@@ -1719,7 +1723,8 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
 
 .next-project-preview img {
     width: 100%;
-    height: 200px;
+    height: 300px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -2632,7 +2637,7 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
     bottom: 0;
     background: rgba(0, 0, 0, 0.7);
     display: flex;
-    flex-direction: column;
+        flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
@@ -2774,4 +2779,352 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
     background: transparent;
     padding: 20px;
     border-radius: 10px;
+}
+
+.brand-key {
+    color: #5B9BD5;
+    font-weight: 700;
+}
+
+.brand-key-heading {
+    text-align: center;
+    font-weight: 700;
+    color: #5B9BD5;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+/* Increase specificity to override any .process-step p color rules */
+.process-step .brand-key-heading {
+    color: #5B9BD5;
+}
+
+/* Subtle frames for images so they don't blend into white backgrounds */
+.project-content img:not(.floating-img) {
+    border: 2px solid #e9e9e9;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Ensure Process & Timeline media inherit the frame */
+.process-step img {
+    border: 2px solid #e9e9e9;
+}
+
+/* Make Next Project image smaller on PianoProse page only */
+body.project-pianoprose .next-project-preview img {
+    height: 220px;
+}
+
+/* Make Next Project image smaller on Second Service page only */
+body.project-secondservice .next-project-preview img {
+    height: 180px;
+}
+
+/* Project 3 layouts: two-column text + screens */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.single-screen img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.kiosk-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.kiosk-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-list {
+    margin: 12px 0 0;
+    padding-left: 18px;
+}
+
+.feature-list li {
+    margin: 6px 0;
+}
+
+/* Project 3 specific styling for new sections */
+.setback-points, .future-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.setback-point, .future-step {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #5B9BD5;
+}
+
+/* Enhanced setback styling for better visibility */
+.setback-point {
+    background: #fff;
+    border-left: 4px solid #e74c3c;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.setback-point h4, .future-step h4 {
+    margin: 0 0 12px 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Make setback headers more prominent */
+.setback-point h4 {
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+.setback-image {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.setback-emojis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.setback-emojis img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.emoji-left, .emoji-right {
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.research-design-content {
+    display: block;
+    margin: 24px 0;
+}
+
+.research-phase, .design-phase {
+    padding: 24px;
+    background: #faf8f3;
+    border-radius: 8px;
+}
+
+/* add spacing between stacked sections */
+.research-phase { margin-bottom: 24px; }
+
+.research-phase h3, .design-phase h3 {
+    margin: 0 0 16px 0;
+    color: #5B9BD5;
+    font-size: 1.3rem;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.research-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.design-subsection {
+    margin: 40px 0 0 0;
+    padding: 32px 0 0 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.design-subsection h3 {
+    margin: 0 0 24px 0;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.design-flow-text {
+    text-align: center;
+    margin: 32px 0;
+}
+
+.flow-indicator {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #5B9BD5;
+    font-weight: 600;
+    font-style: italic;
+    padding: 8px 16px;
+    background: rgba(91, 155, 213, 0.1);
+    border-radius: 20px;
+}
+
+/* Project 3 overview grid */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.overview-grid img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    border-radius: 20px !important;
+}
+
+/* Project 3 problem discovery grid */
+.problem-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.problem-grid img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+.problem-caption {
+    text-align: center;
+    margin-top: 4px;
+}
+
+.problem-caption p {
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    text-transform: none;
+}
+
+/* Project 3: remove all white frames around images */
+body.project-plaidpickup .overview-grid img,
+body.project-plaidpickup .problem-grid img,
+body.project-plaidpickup .screen-grid img,
+body.project-plaidpickup .single-screen img,
+body.project-plaidpickup .kiosk-grid img,
+body.project-plaidpickup .research-phase img,
+body.project-plaidpickup .design-phase img {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Project 3: rounded corners on all images */
+body.project-plaidpickup img {
+    border-radius: 12px;
+}
+
+/* Emphasize rounding on the five overview/problem photos */
+body.project-plaidpickup .overview-grid img,
+body.project-plaidpickup .problem-grid img {
+    border-radius: 16px !important;
+}
+
+/* Design subsection headings in brand blue */
+body.project-plaidpickup .design-subsection h3 {
+    color: #5B9BD5 !important;
+    text-transform: none !important;
+    font-weight: 600;
+}
+
+/* Remove thin divider under Design section on Project 3 */
+body.project-plaidpickup .design-subsection {
+    border-top: none !important;
+    padding-top: 0 !important;
+    margin-top: 24px;
+}
+
+/* Problem Discovery cards - matching setbacks/future styling */
+.problem-circles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 16px 0 20px;
+}
+
+.problem-circle {
+    padding: 28px 24px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px solid #5B9BD5;
+        text-align: center;
+    position: relative;
+}
+
+.problem-number {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #5B9BD5;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.problem-circle span:not(.problem-number) {
+    color: #222;
+    font-weight: 400;
+    line-height: 1.3;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+@media (max-width: 700px) {
+    .problem-circles {
+        grid-template-columns: 1fr;
+    }
 }
