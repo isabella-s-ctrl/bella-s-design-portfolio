@@ -3122,6 +3122,12 @@ body.project-plaidpickup .design-subsection {
     animation: fadeIn 0.3s ease-in-out;
 }
 
+/* Orientation utilities for incorrectly rotated source images */
+.rotate-90-fix {
+    transform: rotate(-90deg);
+    transform-origin: center center;
+}
+
 /* Lazy loading and optimized image styles */
 .optimized-image {
     transition: opacity 0.3s ease;
