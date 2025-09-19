@@ -3124,8 +3124,8 @@ body.project-plaidpickup .design-subsection {
 
 /* Orientation utilities for incorrectly rotated source images */
 .rotate-90-fix {
-    transform: rotate(-90deg);
-    transform-origin: center center;
+    transform: rotate(90deg) !important;
+    transform-origin: center center !important;
 }
 
 /* Lazy loading and optimized image styles */
