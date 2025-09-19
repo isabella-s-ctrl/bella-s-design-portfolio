@@ -279,40 +279,39 @@ document.addEventListener('DOMContentLoaded', function() {
         impactObserver.observe(impactSection);
     }
 }); 
-// Lazy loading for optimized images
+// Lazy loading for optimized images (robust)
 document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.addEventListener('load', () => {
-                    img.classList.add('loaded');
-                });
-                observer.unobserve(img);
-            }
-        });
-    });
-    
-    images.forEach(img => imageObserver.observe(img));
-});
+    const images = document.querySelectorAll('img.optimized-image[loading="lazy"]');
 
-// Lazy loading for optimized images
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.addEventListener('load', () => {
-                    img.classList.add('loaded');
-                });
-                observer.unobserve(img);
-            }
-        });
+    const ensureLoadedClass = (img) => {
+        // If already loaded from cache, mark as loaded immediately
+        if (img.complete && img.naturalWidth > 0) {
+            img.classList.add('loaded');
+            return true;
+        }
+        return false;
+    };
+
+    // Optional IO just to nudge browsers that are conservative with lazy assets
+    let io = null;
+    if ('IntersectionObserver' in window) {
+        io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '200px 0px', threshold: 0.01 });
+    }
+
+    images.forEach((img) => {
+        // Add listeners once
+        img.addEventListener('load', () => img.classList.add('loaded'), { once: true });
+        img.addEventListener('error', () => img.classList.add('loaded'), { once: true });
+
+        // If it is already complete (served from cache), mark loaded now
+        if (!ensureLoadedClass(img) && io) {
+            io.observe(img);
+        }
     });
-    
-    images.forEach(img => imageObserver.observe(img));
 });

@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add fadeIn animation
-const style = document.createElement('style');
-style.textContent = `
+// Add fadeIn animation (scoped variable to avoid global collisions)
+const galleryStyle = document.createElement('style');
+galleryStyle.textContent = `
     @keyframes fadeIn {
         from { opacity: 0; transform: translateY(20px); }
         to { opacity: 1; transform: translateY(0); }
     }
 `;
-document.head.appendChild(style); 
+document.head.appendChild(galleryStyle);
