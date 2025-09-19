@@ -3098,3 +3098,49 @@ body.project-plaidpickup .design-subsection {
         grid-template-columns: 1fr;
     }
 }
+
+/* Lazy loading and optimized image styles */
+.optimized-image {
+    transition: opacity 0.3s ease;
+}
+
+.optimized-image[loading="lazy"] {
+    opacity: 0;
+}
+
+.optimized-image[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Smooth loading animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.optimized-image.loaded {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Lazy loading and optimized image styles */
+.optimized-image {
+    transition: opacity 0.3s ease;
+}
+
+.optimized-image[loading="lazy"] {
+    opacity: 0;
+}
+
+.optimized-image[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Smooth loading animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.optimized-image.loaded {
+    animation: fadeIn 0.3s ease-in-out;
+}

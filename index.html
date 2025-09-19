@@ -22,6 +22,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Test comment to check editability -->
+
+    <style>
+    /* Lazy loading and optimized image styles */
+    .optimized-image {
+        transition: opacity 0.3s ease;
+    }
+    
+    .optimized-image[loading="lazy"] {
+        opacity: 0;
+    }
+    
+    .optimized-image[loading="lazy"].loaded {
+        opacity: 1;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .optimized-image.loaded {
+        animation: fadeIn 0.3s ease-in-out;
+    }
+    </style>
 </head>
 <body>
 
@@ -65,7 +89,10 @@
                     </div>
         
         <div class="hero-photo">
-            <img src="images/bella-photo.jpeg" alt="Bella" class="profile-photo">
+            <picture>
+                <source srcset="https://rsmpxzzhelgzhkmungmd.supabase.co/storage/v1/object/public/portfolio-images/images/bella-photo.webp" type="image/webp">
+                <img src="https://rsmpxzzhelgzhkmungmd.supabase.co/storage/v1/object/public/portfolio-images/images/bella-photo.jpg" alt="Bella" loading="lazy" class="optimized-image">
+            </picture>
             
             <!-- Doodle Animation Container -->
             <div class="doodle-container">
@@ -151,7 +178,10 @@
             <div class="projects-grid">
                 <a href="projects/project1.html" class="project-card">
                     <div class="project-image">
-                        <img src="images/tech-spec.jpg" alt="PianoProse Technical Specifications">
+                        <picture>
+                <source srcset="https://rsmpxzzhelgzhkmungmd.supabase.co/storage/v1/object/public/portfolio-images/images/tech-spec.webp" type="image/webp">
+                <img src="https://rsmpxzzhelgzhkmungmd.supabase.co/storage/v1/object/public/portfolio-images/images/tech-spec.jpg" alt="PianoProse Technical Specifications" loading="lazy" class="optimized-image">
+            </picture>
                     </div>
                     <div class="project-content">
                         <h3>PianoProse</h3>
@@ -165,7 +195,10 @@
                 
                 <a href="projects/project2.html" class="project-card">
                     <div class="project-image">
-                        <img src="images/project2.jpg" alt="Project 2">
+                        <picture>
+                <source srcset="https://rsmpxzzhelgzhkmungmd.supabase.co/storage/v1/object/public/portfolio-images/images/project2.webp" type="image/webp">
+                <img src="https://rsmpxzzhelgzhkmungmd.supabase.co/storage/v1/object/public/portfolio-images/images/project2.jpg" alt="Project 2" loading="lazy" class="optimized-image">
+            </picture>
                     </div>
                     <div class="project-content">
                         <h3>Second Service</h3>
@@ -179,7 +212,10 @@
                 
                 <a href="projects/project3.html" class="project-card">
                     <div class="project-image">
-                        <img src="project-images/project3/main.jpg?v=1" alt="Plaid Pickup main thumbnail">
+                        <picture>
+                <source srcset="https://rsmpxzzhelgzhkmungmd.supabase.co/storage/v1/object/public/portfolio-images/project-images/main.webp" type="image/webp">
+                <img src="https://rsmpxzzhelgzhkmungmd.supabase.co/storage/v1/object/public/portfolio-images/project-images/main.jpg" alt="Plaid Pickup main thumbnail" loading="lazy" class="optimized-image">
+            </picture>
                     </div>
                     <div class="project-content">
                         <h3>Plaid Pickup</h3>
@@ -208,5 +244,26 @@
     <script src="js/script.js?v=3.0"></script>
     
 
+
+    <script>
+    // Lazy loading for optimized images
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.addEventListener('load', () => {
+                        img.classList.add('loaded');
+                    });
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    });
+    </script>
 </body>
 </html> 
