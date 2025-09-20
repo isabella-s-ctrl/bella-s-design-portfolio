@@ -200,19 +200,25 @@
                 </a>
             </div>
             
-            <div class="contact-form">
+            <form action="https://formsubmit.co/isabellaavasill@gmail.com" method="POST" class="contact-form">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_next" value="https://isabella-s-ctrl.github.io/bella-s-design-portfolio/about.html?success=true">
+                <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
                 <div class="form-row">
-                    <input type="text" placeholder="name" class="contact-input">
-                    <input type="email" placeholder="email" class="contact-input">
+                    <input type="text" name="name" placeholder="name" class="contact-input" required>
+                    <input type="email" name="email" placeholder="email" class="contact-input" required>
                 </div>
                 <div class="form-row">
-                    <input type="text" placeholder="subject" class="contact-input">
+                    <input type="text" name="subject" placeholder="subject" class="contact-input" required>
                 </div>
                 <div class="form-row">
-                    <textarea placeholder="say something..." class="contact-textarea"></textarea>
+                    <textarea name="message" placeholder="say something..." class="contact-textarea" required></textarea>
                 </div>
                 <button type="submit" class="contact-submit">send message</button>
-            </div>
+            </form>
         </div>
     </section>
 

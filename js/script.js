@@ -315,3 +315,45 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// FormSubmit success message handling
+document.addEventListener('DOMContentLoaded', function() {
+    // Check for success parameter in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+        // Show success message
+        const successMessage = document.createElement('div');
+        successMessage.innerHTML = `
+            <div style="
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #4CAF50;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                z-index: 1000;
+                font-family: Arial, sans-serif;
+                animation: slideIn 0.3s ease-out;
+            ">
+                ✓ Message sent successfully! I'll get back to you soon.
+            </div>
+            <style>
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            </style>
+        `;
+        document.body.appendChild(successMessage);
+        
+        // Remove success message after 5 seconds
+        setTimeout(() => {
+            successMessage.remove();
+            // Clean up URL
+            const newUrl = window.location.href.split('?')[0];
+            window.history.replaceState({}, document.title, newUrl);
+        }, 5000);
+    }
+});
