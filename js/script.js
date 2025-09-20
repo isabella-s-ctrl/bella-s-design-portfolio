@@ -118,28 +118,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Form submission handling
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
-        
-        // Simple validation
-        if (name && email && message) {
-            // Here you would typically send the data to a server
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            this.reset();
-        } else {
-            alert('Please fill in all fields.');
-        }
-    });
-}
+// Form submission is now handled by FormSubmit - no JavaScript intervention needed
 
 // Gallery filtering (only on gallery pages)
 const filterButtons = document.querySelectorAll('.filter-btn');
