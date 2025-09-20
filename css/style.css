@@ -552,6 +552,12 @@ section {
         max-width: 100% !important;
         margin: 15px 0;
     }
+    
+    /* Second Service video for very small screens */
+    .project-title-video video {
+        max-height: 200px;
+        border-radius: 6px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -3094,6 +3100,23 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
     .back-link {
         font-size: 0.9rem;
         margin-bottom: 15px;
+    }
+
+    /* Fix Second Service video frame issue */
+    .project-title-video {
+        margin-right: 0;
+        justify-content: center;
+    }
+    
+    .project-title-video video {
+        height: auto;
+        max-height: 250px;
+        width: 100%;
+        max-width: 100%;
+        border: none;
+        margin-left: 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     /* Adjust margins for mobile */
