@@ -3129,8 +3129,20 @@ body.project-plaidpickup .design-subsection {
 .rotate-90-fix {
     transform: rotate(270deg) scaleX(-1) !important;
     transform-origin: center center !important;
+}
+
+/* Apply sizing for gallery images only */
+.gallery-item .rotate-90-fix {
     width: 100% !important;
     height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* Ensure profile photo stays circular */
+.profile-photo.rotate-90-fix {
+    width: 400px !important;
+    height: 400px !important;
+    border-radius: 50% !important;
     object-fit: cover !important;
 }
 
