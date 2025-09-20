@@ -459,6 +459,22 @@ section {
         width: 120px;
         height: 120px;
     }
+    
+    /* Greek life hobby photos for very small screens */
+    .hobbies-grid {
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .hobby-frame {
+        width: 120px;
+        height: 120px;
+        border: 3px solid white;
+    }
+    
+    .corner-label {
+        font-size: 0.7rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -2844,6 +2860,31 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
     
     .header-frame:hover {
         transform: rotate(0deg) translateY(-3px);
+    }
+
+    /* Greek life hobby photos - mobile fix */
+    .hobbies-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .hobby-frame {
+        width: 140px;
+        height: 140px;
+        border: 5px solid white;
+    }
+    
+    .photo-with-label {
+        flex: 0 0 auto;
+        margin-bottom: 20px;
+    }
+    
+    .corner-label {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+        text-align: center;
     }
 
     /* Adjust margins for mobile */
