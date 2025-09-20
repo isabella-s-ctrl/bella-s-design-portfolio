@@ -380,8 +380,28 @@ section {
 }
 
 @media (max-width: 480px) {
+    /* Navigation for small mobile */
+    .nav-menu {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
+    }
+    
+    /* Hero section for small mobile */
     .line {
-        font-size: 4vw;
+        font-size: 22px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .hero {
+        padding: 15px 10px;
+    }
+    
+    .hero-content {
+        gap: 20px;
     }
     
     /* Extra small mobile optimizations */
@@ -398,13 +418,13 @@ section {
     }
     
     .profile-photo {
-        width: 200px;
-        height: 200px;
+        width: 160px;
+        height: 160px;
     }
     
     .circular-frame {
-        width: 300px;
-        height: 300px;
+        width: 240px;
+        height: 240px;
     }
     
     .hero-title {
@@ -419,6 +439,10 @@ section {
     .container {
         padding-left: 15px;
         padding-right: 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
     }
 }
 
@@ -2669,20 +2693,67 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Navigation fixes */
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    .nav-menu {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .nav-brand a {
+        font-size: 1.1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
+    /* Hero section fixes */
+    .hero {
+        min-height: 100vh;
+        padding: 20px 15px;
+    }
+    
     .hero-content {
         flex-direction: column;
         text-align: center;
-        gap: 40px;
+        gap: 30px;
+        max-width: 100%;
+    }
+    
+    .line {
+        font-size: 28px !important;
+        margin-bottom: 15px !important;
+        line-height: 1.1 !important;
+    }
+    
+    .line-3 {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin-top: 20px !important;
+    }
+    
+    .scroll-hint {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin-top: 30px !important;
     }
     
     .profile-photo {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
     
     .circular-frame {
-        width: 350px;
-        height: 350px;
+        width: 280px;
+        height: 280px;
     }
     
     .projects-grid {
@@ -2747,6 +2818,12 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
     
     .section-block {
         margin: 0 auto 60px !important;
+    }
+    
+    /* Container padding for mobile */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
