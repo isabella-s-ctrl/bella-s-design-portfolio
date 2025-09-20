@@ -475,6 +475,28 @@ section {
     .corner-label {
         font-size: 0.7rem;
     }
+    
+    /* Contact form for very small screens */
+    .contact-form {
+        max-width: 95%;
+        padding: 0 5px;
+    }
+    
+    .contact-input {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+    
+    .contact-textarea {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+        min-height: 80px;
+    }
+    
+    .contact-submit {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -2885,6 +2907,34 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
         font-size: 0.8rem;
         margin-bottom: 8px;
         text-align: center;
+    }
+
+    /* Contact form mobile fix */
+    .contact-form {
+        max-width: 90%;
+        padding: 0 10px;
+    }
+    
+    .form-row:first-child {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contact-input {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+    
+    .contact-textarea {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+        min-height: 100px;
+    }
+    
+    .contact-submit {
+        font-size: 0.9rem;
+        padding: 12px 25px;
     }
 
     /* Adjust margins for mobile */
