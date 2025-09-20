@@ -448,6 +448,17 @@ section {
     .section-title {
         font-size: 1.8rem;
     }
+    
+    /* About page photos for very small screens */
+    .header-pictures {
+        gap: 10px;
+        padding: 0 5px;
+    }
+    
+    .header-frame {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -2810,6 +2821,31 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
         line-height: 1.9;
     }
     
+    /* About page header photos - mobile fix */
+    .header-pictures {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .header-frame {
+        width: 140px;
+        height: 140px;
+        border: 2px solid #5B9BD5;
+    }
+    
+    .header-frame:nth-child(1),
+    .header-frame:nth-child(2),
+    .header-frame:nth-child(3),
+    .header-frame:nth-child(4) {
+        transform: rotate(0deg) translateY(0px);
+    }
+    
+    .header-frame:hover {
+        transform: rotate(0deg) translateY(-3px);
+    }
+
     /* Adjust margins for mobile */
     .facts-hobbies-section {
         margin: 60px auto 60px !important;
