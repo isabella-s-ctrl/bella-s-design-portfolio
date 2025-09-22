@@ -37,6 +37,27 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #faf8f3;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="%23F39C12"/></svg>'), auto;
+}
+
+/* Clickable elements - blue cursor (excluding gallery items) */
+a, button, [role="button"], input[type="submit"], input[type="button"], .clickable, .project-card, .filter-btn {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="%235B9BD5"/></svg>'), pointer;
+}
+
+/* Gallery items keep orange cursor */
+.gallery-item {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="%23F39C12"/></svg>'), auto;
+}
+
+/* Override filter button cursor specifically */
+.filter-btn {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="%235B9BD5"/></svg>'), pointer !important;
+}
+
+/* Skills section keeps orange cursor */
+.skills-list, .skills-list li {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="%23F39C12"/></svg>'), auto !important;
 }
 
 .container {
