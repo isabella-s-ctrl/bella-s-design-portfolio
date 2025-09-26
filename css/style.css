@@ -495,6 +495,10 @@ section {
     
     .corner-label {
         font-size: 0.7rem;
+        white-space: normal;
+        word-wrap: break-word;
+        max-width: 100px;
+        line-height: 1.1;
     }
     
     /* Contact form for very small screens */
@@ -2772,7 +2776,10 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
     color: #5B9BD5;
     font-size: 1rem;
     font-weight: 700;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 150px;
+    line-height: 1.2;
     z-index: 10;
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
@@ -3025,6 +3032,10 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
         font-size: 0.8rem;
         margin-bottom: 8px;
         text-align: center;
+        white-space: normal;
+        word-wrap: break-word;
+        max-width: 120px;
+        line-height: 1.2;
     }
 
     /* Contact form mobile fix */
