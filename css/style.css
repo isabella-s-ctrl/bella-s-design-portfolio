@@ -2506,9 +2506,17 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
 
 .contact-section h3 {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     color: #333;
     font-weight: 600;
+}
+
+.connect-message {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+    text-align: center;
 }
 
 .contact-form {
