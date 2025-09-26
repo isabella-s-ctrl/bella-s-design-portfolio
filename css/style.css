@@ -2768,11 +2768,13 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .corner-label {
     position: static;
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     color: #5B9BD5;
     font-size: 1rem;
     font-weight: 700;
@@ -2783,6 +2785,7 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
     text-align: center;
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
+    display: block;
 }
 
 .corner-label:hover {
