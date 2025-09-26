@@ -2765,14 +2765,14 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
 
 .photo-with-label {
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .corner-label {
-    position: absolute;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    margin-top: 15px;
     color: #5B9BD5;
     font-size: 1rem;
     font-weight: 700;
@@ -2780,18 +2780,19 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
     word-wrap: break-word;
     max-width: 150px;
     line-height: 1.2;
-    z-index: 10;
+    text-align: center;
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
-    text-align: center;
 }
 
 .corner-label:hover {
-    transform: translateX(-50%) translateY(-5px) scale(1.05);
+    transform: translateY(-2px) scale(1.05);
+    color: #4a8bc4;
 }
 
 .photo-with-label:hover .corner-label {
-    transform: translateX(-50%) translateY(-10px) scale(1.1);
+    transform: translateY(-3px) scale(1.1);
+    color: #4a8bc4;
 }
 
 .hobby-frame:hover {
