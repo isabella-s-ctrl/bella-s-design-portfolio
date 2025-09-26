@@ -2506,17 +2506,9 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
 
 .contact-section h3 {
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     color: #333;
     font-weight: 600;
-}
-
-.connect-message {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 30px;
-    font-style: italic;
-    text-align: center;
 }
 
 .contact-form {
@@ -2610,23 +2602,24 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
 /* Action Buttons */
 .action-buttons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .icon-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     color: #666;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
-    padding: 15px 20px;
+    font-size: 1.2rem;
+    padding: 18px 25px;
     border: 2px solid #ddd;
-    border-radius: 25px;
+    border-radius: 30px;
     transition: all 0.3s ease;
     background: white;
 }
@@ -2639,8 +2632,8 @@ body.project-pianoprose .design-content h3:nth-of-type(2) + p {
 }
 
 .icon-btn svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
 }
 
 .resume-btn {
